@@ -42,4 +42,4 @@ jobs:
           # Both secrets used to be wired here at once and OPENROUTER_API_KEY silently
           # won, so the plan was never actually spent; this is the deliberate choice.
           llm: openai
-          license_key: ${{ secrets.CODEBOARDING }}
+          openai_api_key: ${{ secrets.CODEBOARDING }}
