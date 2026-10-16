@@ -33,13 +33,13 @@ jobs:
     steps:
       - uses: CodeBoarding/CodeBoarding-action@v1
         with:
+          mode: sync
           # Cap review analysis at depth 4, including baseline bootstrapping.
           # Requires the licensed tier (the free tier caps depth at 3).
-          depth_cap: 4
+          depth_cap: 2
           # Named, not inferred: the action requires `llm` and fails rather than falling
           # back to anything. CodeBoarding's own repositories run on the CodeBoarding
           # plan, which is also what lifts the free tier's depth cap off `depth_cap: 4`.
           # Both secrets used to be wired here at once and OPENROUTER_API_KEY silently
           # won, so the plan was never actually spent; this is the deliberate choice.
-          llm: openai
-          openai_api_key: ${{ secrets.CODEBOARDING }}
+          llm: hosted
