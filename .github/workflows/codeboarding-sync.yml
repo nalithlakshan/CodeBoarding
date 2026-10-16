@@ -43,7 +43,5 @@ jobs:
           mode: sync
           force_full: ${{ inputs.force_full || false }}
           target_branch: 'main'
-          # Your CodeBoarding plan, on CodeBoarding's hosted tier. The run fails with
-          # a message naming this secret if CODEBOARDING_LICENSE is not set.
-          llm: license
-          license_key: ${{ secrets.CODEBOARDING_LICENSE }}
+          depth_cap: 2
+          llm: hosted
