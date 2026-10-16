@@ -41,5 +41,5 @@ jobs:
           # plan, which is also what lifts the free tier's depth cap off `depth_cap: 4`.
           # Both secrets used to be wired here at once and OPENROUTER_API_KEY silently
           # won, so the plan was never actually spent; this is the deliberate choice.
-          llm: license
-          license_key: ${{ secrets.CODEBOARDING_LICENSE }}
+          llm: openai
+          license_key: ${{ secrets.CODEBOARDING }}
